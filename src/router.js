@@ -2,9 +2,10 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 import Home from '@/components/templates/Home';
+import Contents from '@/components/templates/Contents';
 import Page from '@/components/templates/Page';
 
-import placesIntro from '@/assets/places.md';
+import placesIntro from '@/assets/intros/places.md';
 
 Vue.use(Router);
 
@@ -13,6 +14,10 @@ export default new Router({
     {
       path: '/',
       component: Home,
+    },
+    {
+      path: '/contents',
+      component: Contents,
     },
     {
       path: '/places',

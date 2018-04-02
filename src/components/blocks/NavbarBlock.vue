@@ -5,6 +5,7 @@
     <b-collapse is-nav id="nav_collapse">
       <b-navbar-nav>
         <b-nav-item to="/" :exact="true">Home</b-nav-item>
+        <b-nav-item to="/contents">Contents</b-nav-item>
         <b-nav-item to="/places">Places</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
