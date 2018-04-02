@@ -2,39 +2,29 @@
   <div id="app">
     <navbar-block/>
 
-    <div class="container-fluid area d-flex">
-      <div class="side-link-container align-self-center">
-        <router-link class="side-link text-white bg-secondary" v-if="previous" :to="previous">
-          &larr;
-        </router-link>
-      </div>
+    <div class="container-fluid area">
+      <router-link class="side-link left text-white bg-secondary" v-if="previous" :to="previous">
+        &larr;
+      </router-link>
 
-      <div class="area-expand">
-        <transition name="fade">
-          <router-view :key="$route.fullPath"/>
-        </transition>
-      </div>
+      <transition name="fade">
+        <router-view :key="$route.fullPath"/>
+      </transition>
 
-      <div class="side-link-container align-self-center">
-        <router-link class="side-link text-white bg-secondary" v-if="next" :to="next">
-          &rarr;
-        </router-link>
-      </div>
+      <router-link class="side-link right text-white bg-secondary" v-if="next" :to="next">
+        &rarr;
+      </router-link>
     </div>
-
-    <footer-block/>
   </div>
 </template>
 
 <script>
 import NavbarBlock from '@/components/blocks/NavbarBlock';
-import FooterBlock from '@/components/blocks/FooterBlock';
 
 export default {
   name: 'App',
   components: {
     NavbarBlock,
-    FooterBlock,
   },
   data() {
     return {
@@ -82,49 +72,43 @@ export default {
 </script>
 
 <style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.333s;
-}
-
-.fade-leave-to,
-.fade-enter {
-  opacity: 0;
-}
-
-.fade-leave,
-.fade-enter-to {
-  opacity: 1;
-}
-
-html, body {
-  height: 100%;
-}
 #app {
-  min-height: 100%;
   padding-top: 5rem;
 }
 
-.area { height: calc(100vh - 8rem); }
-.area-expand {
+.area {
   position: relative;
-  flex: auto;
+  padding: 0 50px;
 }
-.area-content {
+.content {
   position: absolute;
-  top: 0; bottom: 0;
-  left: 1rem; right: 1rem;
+  top: 0; left: 50px; right: 50px;
+  min-height: calc(100vh - 5rem);
+  padding-bottom: 2rem;
 }
 
-.side-link-container {
-  display: block;
-  width: 30px; height: 30px;
-}
 .side-link {
+  position: fixed;
+  top: 50%; margin-top: -15px;
   display: block;
   width: 30px; height: 30px;
   border-radius: 50%;
   text-align: center;
   line-height: 30px;
+}
+.side-link.left { left: 10px; }
+.side-link.right { right: 10px; }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.333s;
+}
+.fade-leave-to,
+.fade-enter {
+  opacity: 0;
+}
+.fade-leave,
+.fade-enter-to {
+  opacity: 1;
 }
 </style>

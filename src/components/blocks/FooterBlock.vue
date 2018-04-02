@@ -1,15 +1,12 @@
 <template>
-  <div class="footer bg-light text-muted py-1 text-center">
+  <footer class="w-100 mt-2 py-2 small text-muted text-center">
     &copy; 2018 {{ this.$title }}
-  </div>
+  </footer>
 </template>
 
 <style>
-  .footer {
+  footer {
     position: absolute;
-    bottom: 0;
-    width: 100%; height: 2rem;
-    font-size: 10px;
-    line-height: 20px;
+    bottom: 0; left: 0; right: 0;
   }
 </style>
