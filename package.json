@@ -14,7 +14,9 @@
     "bootstrap": "^4.0.0",
     "bootstrap-vue": "^2.0.0-rc.2",
     "marked": "^0.3.19",
+    "node-sass": "^4.8.3",
     "raw-loader": "^0.5.1",
+    "sass-loader": "^6.0.7",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },

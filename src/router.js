@@ -44,7 +44,7 @@ export default new Router({
       path: '/places/larry',
       component: Page,
       meta: {
-        title: 'Sky',
+        title: 'Larry',
         type: 'image',
         image: 'places/larry.jpg',
         location: '41.8781° N, 87.6298° W',

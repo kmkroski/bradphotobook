@@ -70,7 +70,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
   .figure {
     max-height: 100%;
   }
