@@ -1,13 +1,22 @@
 <template>
-  <b-navbar toggleable="sm" variant="secondary" type="dark" fixed="top">
-    <b-navbar-brand to="/">Brad's Photobook</b-navbar-brand>
-    <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
-    <b-collapse is-nav id="nav_collapse">
-      <b-navbar-nav>
-        <b-nav-item to="/" :exact="true">Home</b-nav-item>
-        <b-nav-item to="/contents">Contents</b-nav-item>
-        <b-nav-item to="/places">Places</b-nav-item>
-      </b-navbar-nav>
-    </b-collapse>
-  </b-navbar>
+  <header>
+    <nav class="navbar justify-content-center">
+      <div class="container pl-0 pr-0">
+        <div class="navbar-brand d-none d-sm-block">
+          Bradley Siefert
+        </div>
+        <div class="abs-center-x">
+          <a to="/">
+            <img src="/static/images/logo.svg" alt="10 Years of Photos, 2007 - 2017">
+          </a>
+        </div>
+        <div class="d-none d-sm-block ml-auto">
+          <a class="nav-link" target="_blank" href="http://bradleysiefert.com">
+            <img width="32" src="/static/images/bks-camera.png"
+                 alt="Bradley Siefert camera illustration logo">
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
 </template>

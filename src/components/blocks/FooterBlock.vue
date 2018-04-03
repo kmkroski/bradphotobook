@@ -1,12 +1,39 @@
 <template>
-  <footer class="w-100 mt-2 py-2 small text-muted text-center">
-    &copy; 2018 {{ this.$title }}
-  </footer>
+  <div>
+    <router-link class="mobile-next" :to="next">
+      Next <i class="ion-chevron-right"></i>
+    </router-link>
+    <router-link class="mobile-prev" :to="previous">
+      <i class="ion-chevron-left"></i> Prev
+    </router-link>
+
+    <footer class="footer">
+      <nav class="navbar navbar-expand">
+        <div class="container">
+          <router-link class="nav-link" :to="previous">
+            <i class="ion-chevron-left"></i> Prev
+          </router-link>
+          <div class="nav-link" v-if="previous === null">
+            &nbsp;
+          </div>
+          <router-link class="nav-link" to="/contents">Table of Contents</router-link>
+          <router-link class="nav-link" :to="next">
+            Next <i class="ion-chevron-right"></i>
+          </router-link>
+          <div class="nav-link" v-if="next === null">
+            &nbsp;
+          </div>
+        </div>
+      </nav>
+    </footer>
+  </div>
 </template>
 
-<style>
-  footer {
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-  }
-</style>
+<script>
+export default {
+  props: {
+    previous: String,
+    next: String,
+  },
+};
+</script>

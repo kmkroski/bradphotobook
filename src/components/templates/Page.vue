@@ -1,42 +1,46 @@
 <template>
-  <div class="content row justify-content-center align-items-center">
+  <main>
 
-    <figure v-if="content.type == 'image'" class="figure mb-0">
-      <img class="figure-img img-fluid"
-        :alt="content.title"
-        :src="'/static/images/' + content.image">
-      <figcaption class="figure-caption">
-        <div class="d-flex justify-content-between small">
-          <div class="text-left">
-            {{ content.location }}
-          </div>
-          <div class="text-center">
-            {{ content.date }}
-          </div>
-          <div class="text-right">
-            {{ content.settings }}
+    <div v-if="content.type == 'image'">
+      <div class="width-contain">
+        <div class="photo">
+          <img :src="'/static/photos/' + content.image" :alt="content.title">
+        </div>
+        <div class="details">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md date-time">2013/07/18 7:26pm</div>
+              <div class="col-md photo-metadata">48mm f/16 1/10th 50 ISO</div>
+              <div class="col-md gps-location">43°32’1” N 109°37’55” W</div>
+            </div>
           </div>
         </div>
-      </figcaption>
-    </figure>
-
-    <div v-if="content.type == 'text'" class="col-12 col-sm-10 col-md-6">
-      <h3>{{ content.title }}</h3>
-      <hr>
-      <div class="text-justify" :inner-html.prop="content.text | markdown"></div>
+      </div>
     </div>
 
-    <footer-block/>
-  </div>
+    <div v-if="content.type == 'text'" class="container">
+      <div class="row">
+        <div class="col-md-8 col-lg-6 m-auto">
+          <div class="text-block" :inner-html.prop="content.text">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer-block :next="next" :previous="previous"/>
+  </main>
 </template>
 
 <script>
 import FooterBlock from '@/components/blocks/FooterBlock';
-import marked from 'marked';
 
 export default {
   components: {
     FooterBlock,
+  },
+  props: {
+    previous: String,
+    next: String,
   },
   data() {
     return {
@@ -55,11 +59,6 @@ export default {
     }
 
     document.title = `${runningTitles.reverse().join(' | ')} | ${this.$title}`;
-  },
-  filters: {
-    markdown(text) {
-      return marked(text, { sanitize: true });
-    },
   },
   methods: {
     findMetaByRoute(path) {

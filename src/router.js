@@ -5,7 +5,7 @@ import Home from '@/components/templates/Home';
 import Contents from '@/components/templates/Contents';
 import Page from '@/components/templates/Page';
 
-import placesIntro from '@/assets/intros/places.md';
+import tenYearsIn from '@/assets/intros/tenyearsin.txt';
 
 Vue.use(Router);
 
@@ -20,48 +20,36 @@ export default new Router({
       component: Contents,
     },
     {
-      path: '/places',
+      path: '/samples',
       component: Page,
       meta: {
-        title: 'Places',
+        title: 'Ten Years In',
         type: 'text',
-        text: placesIntro,
+        text: tenYearsIn,
       },
     },
     {
-      path: '/places/dog',
+      path: '/samples/hori',
       component: Page,
       meta: {
-        title: 'Dog',
+        title: 'Horizontal',
         type: 'image',
-        image: 'places/dog.jpg',
+        image: 'samples/hori.jpg',
         location: '41.8781° N, 87.6298° W',
         date: '12-31-2018 08:54 AM',
         settings: 'Some Focus',
       },
     },
     {
-      path: '/places/larry',
+      path: '/samples/vert',
       component: Page,
       meta: {
-        title: 'Larry',
+        title: 'Vertical',
         type: 'image',
-        image: 'places/larry.jpg',
+        image: 'samples/vert.jpg',
         location: '41.8781° N, 87.6298° W',
         date: '02-03-2004 03:45 PM',
         settings: 'Some Exposure',
-      },
-    },
-    {
-      path: '/places/worf',
-      component: Page,
-      meta: {
-        title: 'Worf',
-        type: 'image',
-        image: 'places/worf.jpg',
-        location: 'Forcas III, QG Gamma Sector',
-        date: '47391.2.45',
-        settings: 'Some Transporter',
       },
     },
     {

@@ -3,14 +3,12 @@
 import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue';
 
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
 import './assets/sass/app.scss';
 
 import App from './App';
 import router from './router';
 
-Vue.prototype.$title = 'Brad\'s Photobook';
+Vue.prototype.$title = 'Bradley Siefert | 10 Years of Photos';
 
 Vue.config.productionTip = false;
 
