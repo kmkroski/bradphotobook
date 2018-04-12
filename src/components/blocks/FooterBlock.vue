@@ -16,7 +16,7 @@
           <div class="nav-link" v-if="previous === null">
             &nbsp;
           </div>
-          <router-link class="nav-link" to="/contents">Table of Contents</router-link>
+          <router-link class="nav-link" to="/01/toc">Table of Contents</router-link>
           <router-link class="nav-link" :to="next">
             Next <i class="ion-chevron-right"></i>
           </router-link>

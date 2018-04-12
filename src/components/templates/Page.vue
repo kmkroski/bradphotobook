@@ -1,6 +1,5 @@
 <template>
   <main>
-
     <div v-if="content.type == 'image'">
       <div class="width-contain">
         <div class="photo">
