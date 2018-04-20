@@ -8,9 +8,9 @@
         <div class="details">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-md date-time">2013/07/18 7:26pm</div>
-              <div class="col-md photo-metadata">48mm f/16 1/10th 50 ISO</div>
-              <div class="col-md gps-location">43°32’1” N 109°37’55” W</div>
+              <div class="col-md date-time">{{ content.date }}</div>
+              <div class="col-md photo-metadata">{{ content.settings }}</div>
+              <div class="col-md gps-location">{{ content.location }}</div>
             </div>
           </div>
         </div>
