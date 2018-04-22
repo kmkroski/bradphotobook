@@ -6,11 +6,13 @@
           <div class="text-block">
             <h2>About Me</h2>
             <p>
-              I spend my days designing web and mobile apps, but an incredible part of my time and energy is focused
-              on being a better photographer. Learning the fundamentals of photography took me a very long time before
-              it clicked for me. From that time, I have been driven to learn more and more about how to make great
-              images and how to tell small stories with those images. I am married to a wonderful woman, Nicole, who
-              never complains or shames me when I want to take photos. For that, I am incredibly grateful.
+              I spend my days designing web and mobile apps, but an incredible part
+              of my time and energy is focused on being a better photographer. Learning the
+              fundamentals of photography took me a very long time before it clicked for me.
+              From that time, I have been driven to learn more and more about how to make great
+              images and how to tell small stories with those images. I am married to a wonderful
+              woman, Nicole, who never complains or shames me when I want to take photos. For that,
+              I am incredibly grateful.
             </p>
             <h3>Self Portrait</h3>
             <div class="row details">
