@@ -221,6 +221,20 @@ footer .nav-link:hover {
     }
 }
 
+@media (min-width: 769px) {
+    .details .col-lg:nth-of-type(1) {
+        text-align: left;
+    }
+
+    .details .col-lg:nth-of-type(2) {
+        text-align: center;
+    }
+
+    .details .col-lg:nth-of-type(3) {
+        text-align: right;
+    }
+}
+
 .mobile-next,
 .mobile-prev {
     display: none;
@@ -267,6 +281,12 @@ h3 {
     }
 }
 
+@media (max-width: 767px) {
+  .avatar {
+      max-width: 192px;
+  }
+}
+
 /* ---------- iPhone 8 Plus Landscape only styles --------- */
 @media only screen
 and (width : 736px)
@@ -294,10 +314,14 @@ and (height : 414px)
     }
 
     .width-contain .details {
-        max-width: 192px;
-        margin-left: 30px;
+        max-width: 224px;
+        margin-left: 16px;
         margin-top: 0;
         text-align: left;
+    }
+
+    .photo img {
+        max-height: calc(100vh - 160px);
     }
 
     .details .col-md:nth-of-type(1),
@@ -309,9 +333,9 @@ and (height : 414px)
     .mobile-next,
     .mobile-prev {
         display: block;
-        position: absolute;
+        position: fixed;
         right: 16px;
-        top: calc(50% - 16px);
+        top: calc(50% + 16px);
         font-family: 'SFM';
         font-size: 12px;
         font-weight: 600;
@@ -319,6 +343,11 @@ and (height : 414px)
 
     .mobile-prev {
         left: 16px;
+    }
+
+    .text-block {
+        max-width: calc(100% - 128px);
+        margin: auto;
     }
 }
 

@@ -3,7 +3,9 @@
     <div class="container mt-4 mb-3">
       <div class="row">
         <div class="col-lg-11">
-          <h2>Table of Contents</h2>
+          <div class="text-block pt-0 pb-0">
+            <h2>Table of Contents</h2>
+          </div>
         </div>
         <div class="col-lg-6">
           <div class="text-block pt-0 pb-0">

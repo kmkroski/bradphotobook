@@ -2,10 +2,8 @@
   <main>
     <div class="container">
       <div class="row">
-        <div class="col-md-8 col-lg-6 m-auto">
-          <div class="text-block">
-            <h3>Intro</h3>
-          </div>
+        <div class="col-sm-10 col-lg-10 m-auto">
+          <img src="static/images/intro.jpg" class="img-fluid" alt="">
         </div>
       </div>
     </div>
