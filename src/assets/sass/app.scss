@@ -120,7 +120,7 @@ main {
     line-height: 48px; /* Vertically center the text there */
     background-color: #f5f5f5;
     font-family: 'SFM';
-    font-size: 12px;
+    font-size: .8125rem;
     font-weight: 600;
     margin-bottom: 0;
     border-top: 1px solid #f8f8f8;
@@ -150,7 +150,6 @@ footer .nav-link {
         min-width: 0;
         padding: 0 16px;
         border: 0;
-        font-size: 11px;
     }
 }
 
@@ -184,7 +183,7 @@ footer .nav-link:hover {
 
 .details {
     font-family: 'SFM';
-    font-size: 11px;
+    font-size: .6875rem;
     margin-top: 8px;
     width: 100%;
     letter-spacing: 0.5px;
@@ -261,7 +260,7 @@ h3 {
 }
 
 .text-block {
-    font-size: .9rem;
+    font-size: 1rem;
     color: #333333;
     letter-spacing: 0.3px;
     text-align: justify;
@@ -269,14 +268,14 @@ h3 {
 }
 
 .text-block .cite {
-    font-size: .8125rem;
+    font-size: .9rem;
     text-align: right;
     font-family: 'SFM';
 }
 
 @media (max-width: 767px) {
     .text-block {
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.35;
     }
 }
@@ -291,8 +290,8 @@ h3 {
 @media only screen
 and (width : 736px)
 and (height : 414px)
-// and (orientation : landscape)
-// and (-webkit-device-pixel-ratio : 3)
+and (orientation : landscape)
+and (-webkit-device-pixel-ratio : 3)
 {
     .container {
         max-width: none;
@@ -332,17 +331,20 @@ and (height : 414px)
 
     .mobile-next,
     .mobile-prev {
-        display: block;
+        display: inline;
         position: fixed;
         right: 16px;
         top: calc(50% + 16px);
         font-family: 'SFM';
         font-size: 12px;
         font-weight: 600;
+        z-index: 1;
     }
 
     .mobile-prev {
         left: 16px;
+        top: calc(50% + 16px);
+        z-index: 0;
     }
 
     .text-block {
@@ -366,11 +368,6 @@ and (-webkit-device-pixel-ratio : 3)
         display: none;
     }
 
-    .body-contain {
-        padding-bottom: 0;
-        min-height: calc(100vh - 64px - 44px);
-    }
-
     .width-contain {
         display: flex;
         flex-direction: row;
@@ -383,10 +380,14 @@ and (-webkit-device-pixel-ratio : 3)
     }
 
     .width-contain .details {
-        max-width: 192px;
-        margin-left: 30px;
+        max-width: 224px;
+        margin-left: 16px;
         margin-top: 0;
         text-align: left;
+    }
+
+    .photo img {
+        max-height: calc(100vh - 160px);
     }
 
     .details .col-md:nth-of-type(1),
@@ -397,16 +398,24 @@ and (-webkit-device-pixel-ratio : 3)
 
     .mobile-next,
     .mobile-prev {
-        display: block;
-        position: absolute;
+        display: inline;
+        position: fixed;
         right: 16px;
-        top: calc(50% - 16px);
+        top: calc(50% + 16px);
         font-family: 'SFM';
         font-size: 12px;
         font-weight: 600;
+        z-index: 1;
     }
 
     .mobile-prev {
         left: 16px;
+        top: calc(50% + 16px);
+        z-index: 0;
+    }
+
+    .text-block {
+        max-width: calc(100% - 128px);
+        margin: auto;
     }
 }

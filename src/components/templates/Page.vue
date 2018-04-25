@@ -19,7 +19,7 @@
 
     <div v-if="content.type == 'text'" class="container">
       <div class="row">
-        <div class="col-md-8 col-lg-6 m-auto">
+        <div class="col-lg-9 col-xl-7 m-auto">
           <div class="text-block" :inner-html.prop="content.text">
           </div>
         </div>

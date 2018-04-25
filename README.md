@@ -1,6 +1,6 @@
-# brad_photobook
+# 10 Year Photobook
 
-> Brad's Photobook
+> Brad Siefert's 10 Year Photobook
 
 ## Build Setup
 

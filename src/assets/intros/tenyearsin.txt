@@ -17,7 +17,10 @@
     about the humanity represented inside of this book and that you know a bit more about my last
     10 years as a photographer. Putting this book together is an opportunity for me to look back
     at the work I’ve done and to crystallize it by putting it on paper. I hope that you enjoy and
-    are moved by this decade’s work. Let’s all meet up again in another 10 years.
+    are moved by this decade’s work. 
+	</p>
+<p>	
+	Let’s all meet up again in another 10 years.
 </p>
 <p class="cite">
     - Bradley Siefert, Dec 2016
