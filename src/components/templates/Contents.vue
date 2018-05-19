@@ -276,8 +276,5 @@ export default {
       routes: {},
     };
   },
-  created() {
-    document.title = `Contents | ${this.$title}`;
-  },
 };
 </script>

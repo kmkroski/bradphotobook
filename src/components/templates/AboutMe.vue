@@ -62,8 +62,5 @@ export default {
       routes: {},
     };
   },
-  created() {
-    document.title = `About Me | ${this.$title}`;
-  },
 };
 </script>

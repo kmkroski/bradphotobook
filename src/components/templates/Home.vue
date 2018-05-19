@@ -23,8 +23,5 @@ export default {
     previous: String,
     next: String,
   },
-  created() {
-    document.title = this.$title;
-  },
 };
 </script>
