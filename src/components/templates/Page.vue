@@ -48,16 +48,7 @@ export default {
   },
   created() {
     this.content = this.findMetaByRoute(this.$route.path);
-
-    const routePaths = this.$route.path.split('/').filter(el => el);
-    const runningTitles = [];
-    let runningPath = '';
-    for (let i = 0; i < routePaths.length; i += 1) {
-      runningPath = `${runningPath}/${routePaths[i]}`;
-      runningTitles.push(this.findMetaByRoute(runningPath).title);
-    }
-
-    document.title = `${runningTitles.reverse().join(' | ')} | ${this.$title}`;
+    document.title = `${this.content.title} | ${this.$title}`;
   },
   methods: {
     findMetaByRoute(path) {
